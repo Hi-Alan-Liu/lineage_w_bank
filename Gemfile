@@ -17,7 +17,9 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'sqlite3'
+
+  gem 'activerecord-sqlserver-adapter'
+  gem 'tiny_tds'
 end
 
 group :production do

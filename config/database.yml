@@ -1,8 +1,13 @@
 development:
-  adapter: sqlite3
+  adapter: sqlserver
+  mode: dblib
+  
+  username: sa
+  password: 12345678
+  database: lineage_w_bank_dev  
+  host: localhost
   pool: 5
   timeout: 5000
-  database: db/development.sqlite3
 
 test:
   adapter: sqlite3
@@ -11,8 +16,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
   adapter: postgresql
-  database: my_database_production
+  database: lineage_w_bank
   pool: 5
   timeout: 5000
